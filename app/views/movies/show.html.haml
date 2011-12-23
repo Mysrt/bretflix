@@ -20,7 +20,14 @@
         %b
           = t("activerecord.attributes.movie.user_id", :default => t("activerecord.labels.user_id", :default => "User"))
           \:
-        = @movie.user.name
+
+      -if @movie.user 
+        -if @movie.user == current_user
+          = button_to 'return', :action => 'return', :id => @movie.id
+        -else
+          = @movie.user.try(:name)
+      -else
+        = button_to 'checkout', :action => 'checkout', :id => @movie.id 
       .wat-cf
         = link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_movie_path(@movie), :class => "button"
         = link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), movie_path(@movie), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
