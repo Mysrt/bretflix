@@ -4,6 +4,9 @@ Bretflix::Application.configure do
   # Code is not reloaded between requests
   config.cache_classes = true
 
+  # Log error messages when you accidentally call methods on nil.
+  config.whiny_nils = true
+
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
@@ -13,12 +16,12 @@ Bretflix::Application.configure do
 
   # Compress JavaScripts and CSS
   config.assets.compress = false
+  
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = false
 
-  # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
-
-  # Generate digests for assets URLs
-  config.assets.digest = true
+  # Only use best-standards-support built into browsers
+  config.action_dispatch.best_standards_support = :builtin
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
