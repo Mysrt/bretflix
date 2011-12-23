@@ -8,6 +8,8 @@ web-app-theme/themes/default/images/button-background.png: web-app-theme/themes/
 web-app-theme/themes/default/images/messages/error.png: web-app-theme/themes/default/images/messages/error-95ffb90d15613cfd396343e1d6c8842f.png
 web-app-theme/themes/default/images/messages/notice.png: web-app-theme/themes/default/images/messages/notice-67fe36e8dacc7be1ef43bde32fa3b84e.png
 web-app-theme/themes/default/images/messages/warning.png: web-app-theme/themes/default/images/messages/warning-ee259a750b41727f13760fc303269b9a.png
+application.js: application-49a9b3fec4db9eb795ada88ba9d4112a.js
+application.css: application-3ed5e318cc2e5fb8a71c270ee0289480.css
 web-app-theme/themes/default/fonts/museo700-regular-webfont.eot: web-app-theme/themes/default/fonts/museo700-regular-webfont-43829a4e4ce50fa801d84cdaa9549425.eot
 web-app-theme/themes/default/fonts/museo700-regular-webfont.svg: web-app-theme/themes/default/fonts/museo700-regular-webfont-8b953d3db0ad867434e717b13dce8bbc.svg
 web-app-theme/themes/default/fonts/museo700-regular-webfont.ttf: web-app-theme/themes/default/fonts/museo700-regular-webfont-ff1b7c0badfc298ad4fe766404b2af5a.ttf
@@ -20,7 +22,3 @@ web-app-theme/themes/default/fonts/museosans_500_italic-webfont.eot: web-app-the
 web-app-theme/themes/default/fonts/museosans_500_italic-webfont.svg: web-app-theme/themes/default/fonts/museosans_500_italic-webfont-e4f8e5af35b8254695dd5f60d7fd5a50.svg
 web-app-theme/themes/default/fonts/museosans_500_italic-webfont.ttf: web-app-theme/themes/default/fonts/museosans_500_italic-webfont-24888687a278cc3c2b818cff14de404c.ttf
 web-app-theme/themes/default/fonts/museosans_500_italic-webfont.woff: web-app-theme/themes/default/fonts/museosans_500_italic-webfont-fb40de90a2bb32e75897686fd5ddb081.woff
-jquery-ui.min.js: jquery-ui.min-0424e108178defa1cc794ee24fc92d24.js
-jquery.min.js: jquery.min-460459a37590253002f65e6137a90b87.js
-application.js: application-49a9b3fec4db9eb795ada88ba9d4112a.js
-application.css: application-3ed5e318cc2e5fb8a71c270ee0289480.css
