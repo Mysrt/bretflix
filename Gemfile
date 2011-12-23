@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.3'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -16,7 +16,7 @@ group :development, :test do
   gem 'haml-rails'
   gem 'hpricot'
   gem 'ruby_parser'
-  gem 'web-app-theme', '~> 0.8.0'
+  gem 'web-app-theme', :git => "git://github.com/tscolari/web-app-theme.git", :branch => "v3.1.0"
 end
 
 group :production do
