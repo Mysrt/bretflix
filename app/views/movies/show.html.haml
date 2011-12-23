@@ -1,0 +1,27 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to "#{t("web-app-theme.list", :default => "List")}", movies_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_movie_path
+      %li.active= link_to "#{t("web-app-theme.show", :default => "Show")}", movie_path
+  .content
+    .inner
+      %p
+        %b
+          = t("activerecord.attributes.movie.title", :default => t("activerecord.labels.title", :default => "Title"))
+          \:
+        = @movie.title
+      %p
+        %b
+          = t("activerecord.attributes.movie.genre", :default => t("activerecord.labels.genre", :default => "Genre"))
+          \:
+        = @movie.genre
+      %p
+        %b
+          = t("activerecord.attributes.movie.user_id", :default => t("activerecord.labels.user_id", :default => "User"))
+          \:
+        = @movie.user.name
+      .wat-cf
+        = link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_movie_path(@movie), :class => "button"
+        = link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), movie_path(@movie), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+- content_for :sidebar, render(:partial => 'sidebar')

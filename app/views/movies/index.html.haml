@@ -1,0 +1,38 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active= link_to "#{t("web-app-theme.list", :default => "List")}", movies_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_movie_path
+  .content
+    %h2.title
+      = t("web-app-theme.all", :default => "All")
+      Movies
+    .inner
+      %table.table
+        %tr
+          %th.first ID
+          %th
+            = t("activerecord.attributes.movie.title", :default => t("activerecord.labels.title", :default => "Title"))
+          %th
+            = t("activerecord.attributes.movie.genre", :default => t("activerecord.labels.genre", :default => "Genre"))
+          %th Checked Out By
+        - @movies.each do |movie|
+          %tr{:class => cycle("odd", "even")}
+            %td
+              = movie.id
+            %td
+              = link_to movie.title, movie_path(movie)
+            %td
+              = movie.genre
+            %td
+              -if movie.user 
+                -if movie.user == current_user
+                  = button_to 'return', :action => 'return', :id => movie.id
+                -else
+                  = movie.user.try(:name)
+              -else
+                = button_to 'checkout', :action => 'checkout', :id => movie.id 
+      .actions-bar.wat-cf
+        .actions
+        = paginate @movies
+- content_for :sidebar, render(:partial => 'sidebar')
